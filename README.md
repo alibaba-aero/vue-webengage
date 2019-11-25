@@ -9,9 +9,9 @@
 ## Install
 
 ```bash
-npm install vue-webengage
+npm install @alibaba-aero/vue-webengage
 // or
-yarn add vue-webengage
+yarn add @alibaba-aero/vue-webengage
 ```
 
 
@@ -19,6 +19,8 @@ yarn add vue-webengage
 In `main.js` or wherever you register the plugins:
 
 ```js
+import VueWebengage from '@alibaba-aero/vue-webengage';
+
 Vue.use(VueWebengage, {
     namespace: 'webengage',
     key: process.env.WEBENGAGE_LICENSE,
