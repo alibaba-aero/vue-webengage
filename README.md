@@ -83,11 +83,11 @@ webengage(schema) {
 } 
 ```
 
-There are times when you need same data in different events. So, if webengage is a function, before returning the events object, defined your repetitive data, and use them multiple times in any of the events.
+There are times when you need same data in different events. So, if webengage is a function, before returning the events object, define your repetitive data, and use them multiple times in any of the events.
 
 Also, with `webengage()` being a function, the first parameter will be `schema`.
 
-👍 `vue-webengage` is best to use with [schema-object](https://www.npmjs.com/package/schema-object). It's not depend on it, but highly recommend.
+👍 `vue-webengage` is best to use with [schema-object](https://www.npmjs.com/package/schema-object). It doesn't depend on it, but it is highly recommended.
 
 ```js
 webengage(schema) {
@@ -109,7 +109,7 @@ Each event may be an object, or a function returning an object. `this` will be a
 
 ---
 
-Later then, use `this.$webengage.track(eventName)` in a proper time, to calculate event's data and trigger webengage tracker.
+Later then, use `this.$webengage.track(eventName)` in a proper time, to an calculate event's data and trigger the webengage tracker.
 
 ## $webengage
 These methods and properties will be available in `this.$webengage`.
@@ -121,4 +121,4 @@ These methods and properties will be available in `this.$webengage`.
 **‌📖 [Checkout `schema-object` docs at npm](https://www.npmjs.com/package/schema-object)**
 
 ## Contribute
-Feel free to open pull requests or issues. make sure you implement proper test and all of them are passing with `yarn test:unit`
+Feel free to open pull requests or issues. Make sure you implement proper tests and all of them pass by running `yarn test:unit`
