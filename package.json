@@ -1,0 +1,64 @@
+{
+    "name": "vue-webengage",
+    "version": "0.0.0",
+    "description": "webengage wrapper for vue as a plugin",
+    "module": "dist/vue-webengage.esm.js",
+    "unpkg": "dist/vue-webengage.iife.js",
+    "jsdelivr": "dist/vue-webengage.iife.js",
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "NODE_ENV=production bili --config ./bili.config.js",
+        "build:dev--watch": "NODE_ENV=development bili --watch --config ./bili.config.js",
+        "test:unit": "jest --coverage --silent",
+        "test:unit--watch": "node --inspect node_modules/.bin/jest --runInBand --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alibaba-aero/vue-webengage.git"
+    },
+    "keywords": [
+        "webengage",
+        "vue",
+        "plugin"
+    ],
+    "author": "Mehdi HoseiniPajooh",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/alibaba-aero/vue-webengage/issues"
+    },
+    "homepage": "https://github.com/alibaba-aero/vue-webengage#readme",
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.7.4",
+        "@babel/plugin-proposal-optional-chaining": "^7.7.4",
+        "@vue/cli-plugin-babel": "^4.0.5",
+        "@vue/cli-plugin-eslint": "^4.0.5",
+        "@vue/cli-service": "^4.0.5",
+        "@vue/eslint-config-airbnb": "^5.0.0",
+        "@vue/test-utils": "^1.0.0-beta.29",
+        "babel-eslint": "^10.0.3",
+        "babel-jest": "^24.9.0",
+        "bili": "^4.8.1",
+        "bili-babel": "^0.2.0",
+        "eslint": "^6.7.0",
+        "eslint-config-airbnb": "^18.0.1",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jest": "^23.0.4",
+        "eslint-plugin-vue": "^6.0.1",
+        "jest": "^24.9.0",
+        "jest-extended": "^0.11.2",
+        "jest-plugin-context": "^2.9.0",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-strip": "^1.2.2",
+        "vue": "^2.6.10",
+        "vue-jest": "^3.0.5",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "peerDependencies": {},
+    "dependencies": {}
+}
