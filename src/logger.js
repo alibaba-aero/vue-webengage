@@ -1,25 +1,23 @@
 export default {
     init({ debug }) {
-        const debugMode = debug || process.env.NODE_ENV === 'development';
-
         return {
             log(...thingToLog) {
-                if (debugMode) {
+                if (debug) {
                     console.log(...thingToLog);
                 }
             },
             warn(...thingToLog) {
-                if (debugMode) {
+                if (debug) {
                     console.warn(...thingToLog);
                 }
             },
             table(...thingToLog) {
-                if (debugMode) {
+                if (debug) {
                     console.table(...thingToLog);
                 }
             },
             error(...thingToLog) {
-                if (debugMode) {
+                if (debug) {
                     console.error(...thingToLog);
                 }
             }
