@@ -27,7 +27,7 @@ export default {
             mounted() {
                 if (goodToGo(this)) {
                     const context = this;
-                    const logger = loggerModule.init({ debug: context.$options.webengage.debug });
+                    const logger = loggerModule.init({ debug: options.debug || context.$options.webengage.debug });
 
                     const useSchemas = options?.schemas;
                     const namespace = options?.namespace || defaultOptions.namespace;
