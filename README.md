@@ -117,6 +117,9 @@ These methods and properties will be available in `this.$webengage`.
 
 - `.track(payload)`
     Triggers webengage's track. The payload will be available when calculating event's data like `'Search - Domestic Hotel'(payload) { ... }`.
+    
+- `service`
+    Original webengage object. contains all methods and properties that webengage provides. use this for tracking user and other things.
 
 ## Contribute
 Feel free to open pull requests or issues. make sure you implement proper test and all of them are passing with `yarn test:unit`

@@ -32,6 +32,8 @@ export default {
                     const namespace = options?.namespace || defaultOptions.namespace;
 
                     this[`$${namespace}`] = {
+                        service: webengageService,
+
                         track(eventName, eventPayload) {
                             try {
                                 const $webengage = evaluate(context.$options.webengage, options?.schemas, context);
