@@ -4,6 +4,8 @@
 
 ***👀 EARLY RELEASE***
 
+[CHANGELOGS](https://github.com/alibaba-aero/vue-webengage/blob/master/CHANGELOG.md)
+
 ---
 
 ## Install
