@@ -16,6 +16,11 @@ export default {
                     console.table(...thingToLog);
                 }
             },
+            dir(...thingToLog) {
+                if (debug) {
+                    console.dir(...thingToLog);
+                }
+            },
             error(...thingToLog) {
                 if (debug) {
                     console.error(...thingToLog);

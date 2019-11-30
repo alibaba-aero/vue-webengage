@@ -29,7 +29,6 @@ export default {
                     const context = this;
                     const logger = loggerModule.init({ debug: options.debug || context.$options.webengage.debug });
 
-                    const useSchemas = options?.schemas;
                     const namespace = options?.namespace || defaultOptions.namespace;
 
                     this[`$${namespace}`] = {
@@ -38,17 +37,13 @@ export default {
                                 const $webengage = evaluate(context.$options.webengage, options?.schemas, context);
                                 const eventData = evaluate($webengage[eventName], eventPayload, context);
 
-                                if (useSchemas && eventData.isErrors()) {
-                                    logger.warn(`Warning in ${eventName}`);
-                                    logger.warn(eventData.getErrors());
-                                    return;
-                                }
                                 logger.log('%cWebengage event ->', 'background:#eaeaea;color:green;', eventName);
-                                logger.table(eventData?.toObject() || eventData);
+                                logger.table(eventData);
 
-                                webengageService.track(eventName, eventData?.toObject() || eventData);
+                                webengageService.track(eventName, eventData);
                             } catch (error) {
-                                logger.error(error);
+                                logger.dir(error);
+                                logger.error(`Error in ${eventName}`, error);
                             }
                         }
                     };
