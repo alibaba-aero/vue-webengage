@@ -1,6 +1,9 @@
 /* eslint-disable */
 export default {
     load(key) {
+        if (window.webengage) {
+            return window.webengage;
+        }
         const scriptTag = document.createElement('scipt');
         scriptTag.type = "text/javascript";
         scriptTag.id = "_webengage_script_tag";
