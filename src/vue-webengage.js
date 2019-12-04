@@ -21,12 +21,13 @@ export default {
         if (!options?.key) {
             throw new Error('You have to define webengage key. got undefined');
         }
-        const webengageService = loader.load(options?.key);
+        const webengageService = loader.load(options.key);
 
         Vue.mixin({
             mounted() {
                 if (goodToGo(this)) {
                     const context = this;
+                    webengageService.debug(!!options?.debug);
                     const logger = loggerModule.init({ debug: options.debug || context.$options.webengage.debug });
 
                     const namespace = options?.namespace || defaultOptions.namespace;
