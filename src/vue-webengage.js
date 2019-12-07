@@ -24,7 +24,7 @@ export default {
         const webengageService = loader.load(options.key);
 
         Vue.mixin({
-            mounted() {
+            beforeCreate() {
                 if (goodToGo(this)) {
                     const context = this;
                     webengageService.debug(!!options?.debug);
