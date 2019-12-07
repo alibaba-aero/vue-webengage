@@ -1,6 +1,6 @@
 {
     "name": "@alibaba-aero/vue-webengage",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "webengage wrapper for vue as a plugin",
     "module": "dist/vue-webengage.esm.js",
     "unpkg": "dist/vue-webengage.iife.js",
