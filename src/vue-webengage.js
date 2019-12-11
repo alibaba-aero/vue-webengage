@@ -27,7 +27,9 @@ export default {
             beforeCreate() {
                 if (goodToGo(this)) {
                     const context = this;
-                    webengageService.debug(!!options?.debug);
+                    webengageService.onReady(() => {
+                        webengageService.debug(!!options?.debug);
+                    });
                     const logger = loggerModule.init({ debug: options.debug || context.$options.webengage.debug });
 
                     const namespace = options?.namespace || defaultOptions.namespace;
